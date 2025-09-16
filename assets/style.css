@@ -1,5 +1,8 @@
 .debug {
-    border: 1px dashed black;
+
+    * {
+        border: 1px solid black;
+    }
 
     header {
         height: 100px;
@@ -7,9 +10,20 @@
 
     .container {
         background-color: pink;
-        height: 100%;
+        min-width: 80px;
+        min-height: 30px;
     }
 
+    section {
+        background-color: purple;
+        min-height: 300px;
+        padding: 1rem;
+    }
+
+    .product-box {
+        width: 100px;
+        max-height: 100%;
+    }
 }
 
 body {
@@ -18,6 +32,7 @@ body {
 }
 
 ul {
+    padding: 0;
     gap: 10px;
     color: var(--dis-white);
 }
@@ -34,7 +49,8 @@ img {
 
 :root {
     --header: #FF6900;
-    --dis-white: white;
+    --nav-links: white;
+    --discounted: red;
 }
 
 /* commons */
@@ -49,6 +65,11 @@ img {
 .align-items-center {
     align-items: center;
 }
+
+.wrap {
+    flex-wrap: wrap;
+}
+
 /* commons - end */
 
 .container {
@@ -60,6 +81,7 @@ img {
 a {
     text-align: center;
     text-decoration: none;
+
     &:hover {
         text-decoration: underline;
     }
@@ -70,6 +92,7 @@ a {
 }
 
 header {
+    position: sticky;
     background-color: var(--header);
 }
 
@@ -77,6 +100,37 @@ header {
     gap: 20px;
 
     a {
-        color: var(--dis-white);
+        color: var(--nav-links);
+    }
+}
+
+
+/* main */
+
+.product-box {
+    width: calc(33.33% - 20px);
+
+    img {
+        margin-top: 10px;
+    }
+}
+
+.product-description {
+    p {
+        margin: 0;
+
+        &.name {
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+
+        .current-price {
+            font-weight: bolder;
+            color: var(--discounted);
+        }
+
+        .discounted-price {
+            text-decoration: line-through;
+        }
     }
 }
