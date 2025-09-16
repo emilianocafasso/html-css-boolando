@@ -1,13 +1,70 @@
-/* commons */
-.flex {
-    display: flex;
+.debug {
+    border: 1px dashed black;
+
+    header {
+        height: 100px;
+    }
+
+    .container {
+        background-color: pink;
+        height: 100%;
+    }
+
 }
 
 
+body {
+    font-family: sans-serif;
+    min-width: 1200px;
+}
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* colors */
+
+:root {
+    --header: #FF6900;
+    --dis-white: white;
+}
+
+/* commons */
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
 
 .container {
     margin: 0 auto;
     max-width: 1200px;
     width: 80%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background-color: var(--header);
+}
+
+.icon-links {
+    gap: 20px;
+
+    a {
+        color: var(--dis-white);
+    }
 }
