@@ -181,3 +181,15 @@ footer {
         margin: 5px;
     }
 }
+
+.product-card {
+    img.back {
+        display: none;
+    }
+    &:hover img.front {
+        display: none;
+    }
+    &:hover img.back {
+        display: block;
+    }
+}
