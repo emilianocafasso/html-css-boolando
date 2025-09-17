@@ -52,6 +52,7 @@ img {
     --nav-links: white;
     --discounted: red;
     --sustainability: green;
+    --footer-color: #1a1a01;
 }
 
 /* commons */
@@ -96,7 +97,7 @@ header {
     background-color: var(--header);
 }
 
-.icon-links {
+.links {
     gap: 20px;
 
     a {
@@ -166,4 +167,17 @@ header {
 .badge-sustainability {
     background-color: var(--sustainability);
     padding: 4px 8px;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--footer-color);
+    color: white;
+}
+
+.social {
+    a {
+        margin: 5px;
+    }
 }
